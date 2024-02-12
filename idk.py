@@ -1,6 +1,8 @@
 numbers = {1, 2, 3, 4, 5, 7, 8, 12, 9}
 
 def create_intervals(sets):
+    if len(sets) == 0:
+        return []
     sets = sorted(list(sets))
     intervals = []
     temp = []
@@ -25,4 +27,3 @@ def create_intervals(sets):
 
 
 print(create_intervals(numbers))
-
