@@ -1,5 +1,3 @@
-numbers = {1, 2, 3, 4, 5, 7, 8, 12, 9}
-
 def create_intervals(sets):
     if len(sets) == 0:
         return []
@@ -24,6 +22,3 @@ def create_intervals(sets):
         temp = (temp[0], temp[-1])
         intervals.append(temp)
     return intervals
-
-
-print(create_intervals(numbers))
