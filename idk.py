@@ -1,12 +1,12 @@
-def create_intervals(sets):
-    if len(sets) == 0:
+def create_intervals(data):
+    if len(data) == 0:
         return []
-    sets = sorted(list(sets))
+    data = sorted(list(data))
     intervals = []
     temp = []
-    for i in range(len(sets) - 1):
-        current_number = sets[i]
-        next_number = sets[i + 1]
+    for i in range(len(data) - 1):
+        current_number = data[i]
+        next_number = data[i + 1]
         if current_number + 1 == next_number:
             temp.append(current_number)
         else:
@@ -14,7 +14,7 @@ def create_intervals(sets):
             temp = (temp[0], temp[-1])
             intervals.append(temp)
             temp = []
-    last_number = sets[-1]
+    last_number = data[-1]
     if len(temp) == 0:
         intervals.append((last_number, last_number))
     else:
